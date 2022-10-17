@@ -1,8 +1,8 @@
 class Player
-  attr_accessor :lives, :name
+  attr_reader :lives, :name
 
   # each player starts with 3 lives
-  def initialize
+  def initialize(name)
     @lives = 3
     @name = name
   end
@@ -12,8 +12,8 @@ class Player
     @lives -= 1
   end
 
-  # If lives > 0 then the player is still alive
-  def alive?
-    @lives > 0
+  # If lives = 0 then the player is dead
+  def dead?
+    @lives.zero?
   end
 end
