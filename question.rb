@@ -21,6 +21,4 @@ class Question
       false
     end
   end
-
-  ## get.chomp
 end
